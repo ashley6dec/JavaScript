@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    margin-top: 12rem;
+    gap: 30px;
+    width: 40vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+  }
+  
+  #top {
+    font-size: 40px;
+    color: rgb(111, 50, 50);
+    margin-top: 15rem;
+  }
+  
+  .Circel {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-color: rgb(153, 255, 0);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  #square {
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+  
+  #triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+  }
+  
+  #star-six {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    position: relative;
+  }
+  
+  #star-six:after {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: -50px;
+  }
+  
+  #hexagon {
+    width: 100px;
+    height: 57.735px;
+    background: red;
+    position: relative;
+  }
+  
+  #hexagon::before {
+    content: "";
+    position: absolute;
+    top: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid red;
+  }
+  
+  #hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 28.8675px solid red;
+  }
+  
+  #heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+  }
+  
+  
+  
+  #diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: red;
+    position: relative;
+    top: -50px;
+  }
+  
+  #diamond:after {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: red;
+  }
