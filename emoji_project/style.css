@@ -1,0 +1,66 @@
+*{
+    margin:0px;
+    padding:0px;
+    border:2px;
+}
+.container{
+    margin:10px;
+    padding:10px;
+    border:3px solid rgb(237, 108, 108);
+    border-radius: 1rem;
+    align-content: center;
+}
+h1,form{
+    text-align: center;
+}
+#Search_field{
+    text-align: center;
+    font-size: large;
+    height:40px;
+    width:260px;
+    border-radius: 2rem;
+    border:3px solid rgb(229, 55, 55);
+}
+#submitButton{
+    height:40px;
+    width:100px;
+    border-radius: 2rem;
+    border:3px solid rgb(233, 32, 22);
+    color:white;
+    background-color: rgb(238, 104, 104);
+}
+#Search_result_container{
+    padding: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.625rem;
+  }
+  
+  .emoji-card {
+    border: 1px solid #ed641f;
+    box-shadow: 4px 4px 1px rgb(214, 54, 54);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    min-height: 200px;
+    width: 250px;
+    padding:1rem;
+    border-radius: 1rem;
+  }
+  
+  .emoji {
+    font-size: 4rem;
+  }
+  
+  .alias {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    text-align: center;
+  }
