@@ -9,7 +9,7 @@
 .back_img {
  margin:0px 0px;
    height:800px;
-   width:1000px;;
+   width:800px;;
     background-image: url('https://ychef.files.bbci.co.uk/1280x720/p02k6vry.jpg');
 
     background-repeat: no-repeat;
@@ -75,6 +75,23 @@
     /* transition: all 0.2s ease-in-out; */
     /* animation-name: animate;
     animation-duration: 0.4s; */
+}
+#lap{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.8rem 2rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(38, 226, 28);
+  color: white;
+  /* transition: all 0.2s ease-in-out; */
+  /* animation-name: animate;
+  animation-duration: 0.4s; */
+}
+
+#lapTime{
+  text-align: center;
 }
 /* @keyframes animate {
     0% {
