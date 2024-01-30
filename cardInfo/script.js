@@ -132,4 +132,4 @@ function storeUserInfo() {
 }
 
 // Call the function to store user information
-// storeUserInfo();
+storeUserInfo();
