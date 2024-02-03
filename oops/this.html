@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+'use strict'
+
+        console.log("global this", this)
+
+        function normal(){
+            console.log("this is normal function", this)
+        }
+
+        const funcExp1 = function named() { console.log("this in named function expression", this)}
+
+        const funcExp2 = function () { console.log("this in anonymous function expression", this)}
+
+       
+        const arrowFunc = () => {console.log("this in arrow function", this)}
+       
+        normal()
+
+        funcExp1()
+        funcExp2()
+        arrowFunc()
+
+        let obj = {
+            name : "abc123",
+            rollNo : 59,
+            getName: function() {console.log("the name is :", this.name)}  // here this keyword has obj as current object
+            //or we can write like
+           // getName() {console.log("the name is :", this.name)} // func takes automatically its name as key
+        }
+
+        //to call getName function outide
+
+        obj.getName()
+
+        normal.apply(obj) //to call this of function having no obj inside it
+        funcExp1.apply(obj)
+
+        funcExp2.apply(obj)
+        arrowFunc.apply(obj)
+
+        normal.apply(obj,[1,2]) // method 1 apply syntax
+        normal.call(obj, 1, 2) //method 2 call syntax
+  
+
+        const bindedFunc = normal.bind(obj)
+  
+  
+  </script>
+
+
+</body>
+</html>

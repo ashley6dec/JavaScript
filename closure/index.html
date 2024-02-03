@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+     function outer(){
+        let a =20;
+        let b=30;
+          
+         function inner(){
+            let c=40;
+            let d=50;
+            a++; b++;
+
+            console.log(a,b,c,d)
+         }
+         return inner;
+     }
+
+    const nested = outer()
+    nested()   //20 30 40 50
+
+    function outer(func, timeout = 5000){
+        let timer;
+
+
+        //syntax for debounce
+        const inner= (...args) =>{
+            clearTimeout(timer);
+            timer = setTimeout(() => { func.apply(this,args);},timeout);
+
+        };
+        return inner
+
+    }
+
+    //  function saveInput(a,b){
+    //     console.log('saving data', a,b);
+    //  }
+function add(a,b){
+    console.log("adding data", a+b);
+}
+const nested = outer(add);
+     console.log("the nested value\n\n",nested)
+     nested(1,2);
+     nested(2,3);
+     nested(3,4);
+
+
+    </script>
+</body>
+</html>

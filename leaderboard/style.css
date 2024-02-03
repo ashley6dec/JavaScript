@@ -1,0 +1,77 @@
+*{
+   margin:0px;
+
+  /* width:80vw */
+
+}
+.form1{
+    padding:10px;
+width:100vw;
+
+font-size:larger;
+display:flex;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+
+
+}
+.content{
+    margin-top:25px;
+    border:2px solid blue;
+    width:150px;
+    height:40px;
+
+}
+.btn{
+    margin-top:25px;
+    border:2px solid blue;
+    width:10rem;
+    height:45px;
+
+}
+ 
+.content1{
+    margin:30px;
+    padding:30px;
+  
+    display: block;
+    border:2px solid rgb(33, 80, 121);
+    background-color: lightgreen;
+
+    display: block;
+    align-items:center;
+    text-align: left; 
+}
+
+.name1{
+    margin-right: 50px;
+    font-size:2rem;
+
+    color:blue;
+}
+.country1{
+    margin-right: 50px;
+    font-size:2rem;
+    color:blue;
+  
+}
+
+.score1{
+    margin-right: 50px;
+    font-size:2rem;
+    color:blue;
+  
+}
+.inc1{
+    margin-right: 50px;
+    font-size:2rem;
+    color:blue;
+  
+}
+.dec1{
+ 
+    font-size:2rem;
+    color:blue;
+  
+}

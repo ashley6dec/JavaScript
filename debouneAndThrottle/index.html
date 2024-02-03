@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<ul id="images-list"style = "height:200vh;">
+    
+
+
+    </ul>
+
+
+    <script>
+
+
+
+const apikey = "_DDIVJSgdK-GI1wA3aHOtxC9YTt8tCY6-4jMk7guznY";
+const count = 5;
+const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apikey}&count=${count}`;  //after ? is called query
+
+
+
+
+  function throttle ( mainFunc, delay){
+    let timerId = null;
+
+    const inner = (...args) =>{
+        if(timerId === null){
+            
+            timerId = setTimeout(() =>{ 
+                mainFunc.apply(this, args)
+                timerId= null;
+            }, delay)
+        }
+    }
+
+    return inner;  //it is required to run the main func
+  }
+
+ async function fetchImage(){
+
+    try{
+            const response = await fetch(apiUrl)
+
+            const parsedResponse = await response.json()
+            
+            console.log(parsedResponse);
+            const imageList = document.getElementById("images-list")
+        
+
+
+            for(let i=0;i<parsedResponse?.length ;i++) // ? means if value is null or defined it will not go forward
+            {
+
+            const imageObj = parsedResponse[i];
+            const listItem = document.createElement('li')
+            const image= document.createElement("img");
+            image.setAttribute("src",parsedResponse[i].url.small )
+            listItem.append(image)
+            imageList.append(listItem);
+
+              }
+       }
+
+   catch(error){
+
+    console.log("error");
+
+   }
+}
+
+  const throttledAdd = throttle(fetchImage, 2000)
+
+  window.addEventListener('scroll',throttledAdd)
+
+    </script>
+</body>
+</html>

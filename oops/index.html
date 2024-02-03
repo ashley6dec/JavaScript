@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+    // const student = {
+    //     name: 'Student 1',
+    //     class:10,
+    //     age:19
+    // }
+
+    // const student1 = {
+    //     name: 'Student 2',
+    //     class:8,
+    //     age:18
+    // }
+
+  
+    // function studentClass(name, className, age){
+    //     const obj = {
+    //         name: name,
+    //         class: className,
+    //         age:age,
+    //         getName: function(){console.log(this.name)}
+    //     }
+    //         return obj;
+    // }
+
+//-------------------class usage---------------------
+
+//  const student1 = studentClass('abc',10,23)
+//  const student2 = studentClass('ghi',9,22)
+
+//  const student3 = studentClass('def',8,21)
+
+//  console.log(student1, student2, student3 )
+
+
+
+
+//----constructor function
+
+function Student(name, className, age){
+
+    this.name = name;
+    this.className = className;
+    this.age = age;
+     this.getAge = function(){console.log("the age is ", this.age)}
+}
+
+//to use same function again and again istead of defining in contructor , create it in function's prototype
+Student.prototype.getName = function (){console.log("the name is ", this.name)}
+
+
+const Student1 = new Student("abc", "x", 10)
+const Student2 = new Student("def", "x", 12)
+
+</script>
+
+</body>
+</html>

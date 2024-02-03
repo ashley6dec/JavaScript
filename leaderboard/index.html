@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <h1>LEADER BOARD</h1>
+       
+         <form onsubmit="addPlayer(event)">
+            <div class="form1">
+             <div>
+                <label for="firstName">   </label>
+                <input class="content" id="firstName" type="text" placeholder="First Name" />
+             </div>
+
+             <div>
+                <label for="lastName">  </label>
+                <input class="content" id="lastName" type="text" placeholder="Last Name" />
+             </div>
+
+             <div>
+                <label for="country"> </label>
+                <input class="content"id="country" type="text" placeholder="Country" />
+             </div>
+
+             <div>
+                <label for="score"> </label>
+                <input class="content" id="score" type="number" placeholder="Score" max="100" min="0" />
+             </div>
+             <button class="btn" type="submit">Add Player</button> 
+
+         </form>
+      </div>
+      <div class="list">
+           <ul class="contentLine"  id="player-list">
+             
+              
+
+           </ul>
+
+   </div>
+    </main>
+
+    <script>
+          
+          const playersListData = []
+
+
+
+
+        function addPlayer(event){
+            event.preventDefault()    //to prevent the default function of refreshing page on submit click
+            
+            const playerList=document.getElementById("player-list")
+
+            const first_Name = document.getElementById("firstName").value;
+            const last_Name = document.getElementById("lastName").value;
+            const country = document.getElementById("country").value;
+            const score = document.getElementById("score").value;  //even though tpe is num .value is string always
+            
+
+            const playerData = { name: first_Name+" "+last_Name,
+                 country: country,
+                score: Number(score)
+            }
+
+                playersListData.push(playerData); //adding data to array       
+            
+                playersListData.sort((a,b)=>parseInt(b.score)-parseInt(a.score))  //sorting list score wise, convert first string to num 
+                  playerList.innerHTML = "";
+
+                for(let i=0;i< playersListData.length; i++){
+
+                    const player = playersListData[i];  //adding value from playerData
+                   
+                    
+
+
+
+                    const liEle = document.createElement("li");
+                    const NameContent =document.createElement("span")
+                    const countryContent =document.createElement("span")
+                    const currentScore =document.createElement("span")
+                    const increment = document.createElement("button");
+                    const decrement = document.createElement("button");
+
+                   increment.innerText = "increase";
+                   decrement.innerText = "decrease";
+
+                   increment.setAttribute("onclick", `increaseScoreHandler(${i})`)
+                   decrement.setAttribute("onclick", `decreaseScoreHandler(${i})`)
+
+              
+
+
+
+                    currentScore.innerText = player.score;
+                    countryContent.innerText = player.country;
+                   NameContent.innerText = player.name;
+
+                   let div=document.createElement("div1")
+                   NameContent.classList.add("name1");
+                    countryContent.classList.add("country1");
+                   currentScore.classList.add("score1");
+                   increment.classList.add("inc1");
+                   decrement.classList.add("dec1");
+                   div.classList.add("content1");
+                   div.append(NameContent, countryContent, currentScore, increment, decrement)
+
+                    liEle.appendChild(div);
+                    playerList.append(liEle);
+                }
+            }
+
+             function refreshList(){
+                const playerList=document.getElementById("player-list")
+
+                playersListData.sort((a,b)=>parseInt(b.score)-parseInt(a.score))  //sorting list score wise, convert first string to num 
+                  playerList.innerHTML = "";
+
+                for(let i=0;i< playersListData.length; i++){
+
+                    const player = playersListData[i];  //adding value from playerData
+                   
+                    const liEle = document.createElement("li");
+                    const NameContent =document.createElement("span")
+                    const countryContent =document.createElement("span")
+                    const currentScore =document.createElement("span")
+                   
+                    const increment = document.createElement("button");
+                    const decrement = document.createElement("button");
+
+                   increment.innerText = "increase";
+                   decrement.innerText = "decrease";
+
+                   increment.setAttribute("onclick", `increaseScoreHandler(${i})`)
+                   decrement.setAttribute("onclick", `decreaseScoreHandler(${i})`)
+
+                    currentScore.innerText = player.score;
+                    countryContent.innerText = player.country;
+                    NameContent.innerText = player.name;
+                    
+
+                    liEle.append(NameContent, countryContent, currentScore, increment, decrement);
+                    playerList.append(liEle);
+             }
+            }
+            function increaseScoreHandler(i){
+                playersListData[i].score += 5;
+                refreshList();
+            }
+            function decreaseScoreHandler(i){
+                playersListData[i].score -= 5;
+                refreshList();
+            }
+        
+    </script>
+</body>
+</html>

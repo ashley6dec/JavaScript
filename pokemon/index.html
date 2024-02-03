@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body onload ="fetchPokemonType()">
+    <div>
+    <h1>GeeksterMon</h1>
+    <div>
+        <select id="pokemonTypes" value="types">
+        <option>Please choose a type</option>
+         
+
+        </select>
+        <button onclick="pokemonNameSearchHandler()">Filter by Type</button>
+    </div>
+   
+   <div>
+      <input type="text" id="search"/> <button onclick="fetchPokemon()">Search</button>
+      <div id="myPokemon">
+
+      </div>
+   </div>
+
+   <div id="pokemonList">
+
+   </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
