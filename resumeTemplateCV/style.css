@@ -1,0 +1,28 @@
+@media screen and (max-width: 1180px)
+.big-preview .resume-preview.thumb-preview .document {
+    transform: scale(0.62, 0.63);
+}
+
+.big-preview .document.pagesize {
+    margin-bottom: 0;
+    box-shadow: none;
+}
+.skn-mlf1.hmargins {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.skn-mlf1.pagesize {
+    width: 535px;
+}
+element.style {
+    max-width: 749.7px;
+}
+
+.skn-mlf1.hmargins {
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+.skn-mlf1.fontface {
+    font-family: Century Gothic;
+}

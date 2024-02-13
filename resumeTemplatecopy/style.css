@@ -1,0 +1,89 @@
+.icon-template {
+    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcsgbHslH5ngiBbaJR3yywmdbyOvVnw0B8ga0yn9QQQYaX_3eB");
+    height: 50px;
+    width: 50px;
+    background-position: center center;
+    margin: 0;
+}
+
+.icon-sprite {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.icon-example {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNxyIbYQExiHCz-UnWek4VuDRBCBpXJOj3ng&usqp=CAU");
+    height: 100px;
+    width: 80px;
+    background-position: center center;
+    margin: 0;
+}
+
+.icon-download {
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTDVkaYoswPYCwlzteTQLnRIfctygWNRSmztNfhKiOzpQp-nA1H");
+    height: 50px;
+    width: 50px;
+    background-position: center center;
+    margin: 0;
+}
+
+.rightContainer{
+    position: fixed;
+    top: 10px;
+   right: 0;
+    width: 60vw;
+    background-color: #aedfbd;
+   
+    padding: 10px;
+    
+}
+
+.container3Items{
+display:flex;
+justify-content: space-between;
+
+}
+.leftContainer{
+    display:flex;
+    flex-direction: column;
+    width:20vw;
+    padding:2rem;
+}
+  
+
+ .form1{
+
+    display:flex;
+    flex-direction: column;
+  
+    
+} 
+ .headerDetails{
+    display:flex;
+    flex-direction: column;
+    padding:2px;
+}
+
+.buttons2{
+    padding:1rem;
+    display:flex;
+    justify-content: space-around;
+}
+.ele{
+    display: flex;;
+}
+
+.hidden1{
+    display:none;
+}
+.headerHidden{
+    display:none;
+}
+
+.summaryPortion{
+    margin-top: 0;
+    z-index: 1;
+}
+.headerDetails1{
+  opacity: 0;
+} */
