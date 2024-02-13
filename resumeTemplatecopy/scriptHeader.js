@@ -25,6 +25,16 @@
 //    doc.save('sample_file.pdf');
    
 //    });
+const button = document.getElementById('generatePDF');
+
+        function generatePDF1() {
+            // Choose the element that your content will be rendered to.
+            const element = document.getElementById('rightContainer');
+            // Choose the element and save the PDF for your user.
+            html2pdf().from(element).save();
+        }
+
+      //   button.addEventListener('click', generatePDF1);
 
 
 
@@ -38,6 +48,7 @@ const countryField = document.getElementById("country");
 const mailField = document.getElementById("email");
 const phoneField = document.getElementById("phone");
 const pinField = document.getElementById("pinCode");
+const colorField = document.getElementById("color1");
 
 
 
@@ -52,7 +63,16 @@ const pinField1 = document.getElementById("pinCV");
 
 
 
+const btn = document.getElementById('btn');
 
+btn.addEventListener('click', function onClick(event) {
+   const colorField1 = document.getElementsByClassName("w3-content");
+
+  colorField1.style.color = colorField.value;
+
+  // 👇️ optionally change text color
+  // box.style.color = 'white';
+});
 
 setInterval(function(){
   // console.log(fnameField);
